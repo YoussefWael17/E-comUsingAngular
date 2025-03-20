@@ -1,0 +1,39 @@
+<p class="ml-[10%] italic">Welcome To Our Shopping Website.. </p>
+
+<div class="mt-8 w-[80%] mx-auto flex flex-wrap justify-between ">
+    
+    @for (product of allproducts ; track product.id){
+        <!-- <span>{{product.id}}</span> -->
+        
+         <div class="w-[24%]  bg-[#f7f7f7] h-auto mb-3.5 flex flex-col py-2 px-4 justify-between">
+            <a [routerLink]='["/productdetail",product.id]'>
+            @if (product.stock >=1){
+                <span class="w-[30%] h-[10%] bg-green-700 text-white rounded-4xl flex justify-center items-center">Availble</span>
+            }
+            @else{
+                <span class="w-[40%] h-[10%] bg-red-700 text-white rounded-4xl flex justify-center items-center">Not Availble</span>
+            }
+            
+            <div class="flex justify-center items-center">
+                <img [src]="product.images[0]" alt="" class="h-50 w-50">
+            </div>
+
+            <h2 class="text-black text-lg font-semibold">{{product.title}}</h2>
+            <p class="text-gray-600 text-sm mt-2 h-4 overflow-hidden">{{product.description}}</p>
+            <div class="flex items-center my-2 ">
+                ⭐⭐⭐⭐⭐
+                <span class="text-gray-500 text-sm ml-2">(120)</span>
+
+            </div>
+            <button class="w-[48%] h-8 bg-white text-green-950 rounded-4xl border-green-950 border-2 flex justify-center items-center mb-2">Add To Cart</button>
+
+    </a>
+         </div>
+         
+    }
+   
+    <!-- <div class="w-[24%]  bg-[#f7f7f7] h-12 mb-3.5"></div>
+    <div class="w-[24%]  bg-[#f7f7f7] h-12 mb-3.5"></div>
+    <div class="w-[24%]  bg-[#f7f7f7] h-12 mb-3.5"></div>
+    <div class="w-[24%]  bg-[#f7f7f7] h-12 mb-3.5"></div> -->
+  </div>

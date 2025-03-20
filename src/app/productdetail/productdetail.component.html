@@ -1,0 +1,90 @@
+  <div class="w-[80%] h-[60vh] mx-auto flex justify-between">
+
+
+    <div class="w-[48%] h-[100%] flex flex-col gap-[4%]" >
+      <div class="w-full h-auto flex justify-center items-center bg-[#f7f7f7] rounded-md" >
+        <img class="w-100 h-fit object-cover" [src]="selectProduct.images" alt="Product Image">
+      </div>
+
+      <div class="w-full h-[28%] flex flex-row justify-between">
+          
+        <!-- cart one -->
+        <div class="w-[23%] h-full flex justify-center items-center bg-[#f7f7f7] rounded-lg">
+          <img class="w-full h-auto object-cover" [src]="selectProduct.images" alt="Product Image">
+        </div>
+
+        <!-- cart one -->
+        <div class="w-[23%] h-full flex justify-center items-center bg-[#f7f7f7] rounded-lg">
+          <img class="w-full h-auto object-cover" [src]="selectProduct.images" alt="Product Image">
+        </div>
+
+        <!-- cart one -->
+        <div class="w-[23%] h-full flex justify-center items-center bg-[#f7f7f7] rounded-lg">
+          <img class="w-full h-auto object-cover" [src]="selectProduct.images" alt="Product Image">
+        </div>
+
+        <!-- cart one -->
+        <div class="w-[23%] h-full flex justify-center items-center bg-[#f7f7f7] rounded-lg">
+          <img class="w-full h-auto object-cover" [src]="selectProduct.images" alt="Product Image">
+        </div>
+          
+      </div>
+    </div>
+
+    <div class="w-[48%] h-[100%] flex flex-col gap-[2%] ">
+      <div class="w-full h-auto flex flex-col pb-4 gap-2 border-b-1 border-b-gray-300">
+        <h2 class="text-black text-3xl font-bold">{{selectProduct.title}}</h2>
+        <p class="text-gray-600 text-sm mt-2">{{selectProduct.description}}</p>
+        <div class="flex items-center">
+          ⭐⭐⭐⭐⭐
+          <span class="text-gray-500 text-sm ml-2">(120)</span>
+        </div>
+      </div>
+
+
+      <div class="w-full h-auto flex flex-col pb-4 gap-2 border-b-1 border-b-gray-300">
+        <h2 class="text-black text-2xl font-semibold">$549.00 or 99.99/month</h2>
+        <p class="text-gray-600 text-sm mt-2">suggested payements with 6 months special financing</p>
+      </div>
+
+
+      <div class="w-full h-auto flex flex-col pb-4 gap-4 border-b-1 border-b-gray-300 mt-2">
+        @if (selectProduct.stock >=1){
+          <span class="w-35 h-8 bg-green-700 text-white rounded-4xl flex justify-center items-center">In Stock</span>
+        }
+        @else{
+          <span class="w-35 h-8 bg-red-700 text-white rounded-4xl flex justify-center items-center">Out Of Stock</span>
+        }
+
+        <p class="text-gray-600 text-sm mt-2">More Information</p>
+
+        <div class="flex w-fit gap-4 ">
+          <span class="w-35 h-8 bg-[#c9c8c8] text-black rounded-4xl flex justify-center items-center">Category</span>
+          <span class="w-35 h-8 bg-[#c9c8c8] text-black rounded-4xl flex justify-center items-center">Brand</span>
+        </div>
+      </div>
+
+      <div class="w-full h-auto flex flex-col pb-4 gap-4 border-b-1 border-b-gray-300 mt-2">
+        <div class="flex w-fit gap-4 items-center ">
+          <div class="w-35 h-10 bg-[#e5e5e5] rounded-4xl flex justify-center gap-7 items-center">
+            <span class="text-black font-bold text-xl">-</span>
+            <span class="text-black font-semibold text-xl">1</span>
+            <span class="text-black font-bold text-xl">+</span>
+          </div>
+
+          <p class="text-gray-600 text-sm mt-2 font-semibold">suggested payements with <span class="text-amber-400">6 months</span> special financing</p>
+        </div>
+
+        <div class="flex w-full gap-4 items-center ">
+          <button class="w-[48%] h-10 bg-green-950 text-white rounded-4xl flex justify-center items-center">Buy Now</button>
+          <button class="w-[48%] h-10 bg-white text-green-950 rounded-4xl border-green-950 border-2 flex justify-center items-center">Add To Cart</button>
+        </div>
+        
+      </div>    
+
+      
+
+    </div>
+
+
+  </div>
